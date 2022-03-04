@@ -58,17 +58,33 @@ function moveHostile() {
 
 
     if (rightEdge && goingRight) {
-        for (let i = 0; i < hostileAliens.length; i++)
+        for (let i = 0; i < hostileAliens.length; i++) {
         hostileAliens[i] += width -1
         direction = -1
         goingRight = false;
+       } 
     }
+
+    if(leftEdge && !goingRight) {
+        for (let i = 0; i < hostileAliens.length; i++) {
+            hostileAliens[i] += width -1
+            direction = 1
+            goingRight = true
+        }
+    }
+
+
 
     for (let i = 0; i < hostileAliens.length; i++) {
         hostileAliens[i] += direction
     }
 
     draw()
+
+    if (squares[currentShooterIndex].classList.contains('hostile', 'shooter')) {
+        console.log('game over')
+        clearInterval(hostileId)
+    }
 
 }
 
