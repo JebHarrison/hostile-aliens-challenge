@@ -2,6 +2,8 @@ const grid = document.querySelector('.grid')
 let currentShooterIndex = 202
 let width = 15 
 let direction = 1
+let hostileId
+let goingRight = true
 
 for (let i = 0; i < 225; i++) {
     const square = document.createElement('div')
@@ -54,6 +56,14 @@ function moveHostile() {
     const rightEdge = hostileAliens[hostileAliens.length - 1] % width === width -1
     remove()
 
+
+    if (rightEdge && goingRight) {
+        for (let i = 0; i < hostileAliens.length; i++)
+        hostileAliens[i] += width -1
+        direction = -1
+        goingRight = false;
+    }
+
     for (let i = 0; i < hostileAliens.length; i++) {
         hostileAliens[i] += direction
     }
@@ -62,4 +72,4 @@ function moveHostile() {
 
 }
 
-setInterval(moveHostile, 500)
+hostileId = setInterval(moveHostile, 500)
