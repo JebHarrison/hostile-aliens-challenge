@@ -1,6 +1,7 @@
 const grid = document.querySelector('.grid')
 let currentShooterIndex = 202
 let width = 15 
+let direction = 1
 
 for (let i = 0; i < 225; i++) {
     const square = document.createElement('div')
@@ -54,7 +55,7 @@ function moveHostile() {
     remove()
 
     for (let i = 0; i < hostileAliens.length; i++) {
-        hostileAliens[i] += 1 
+        hostileAliens[i] += direction
     }
 
     draw()
