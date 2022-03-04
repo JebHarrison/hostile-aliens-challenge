@@ -23,6 +23,15 @@ function draw() {
 
 draw()
 
+function remove() {
+    for (let i = 0; i < hostileAliens.length; i++) {
+        squares[hostileAliens[i]].classList.remove('hostile')
+    }
+}
+
+
+
+
 squares[currentShooterIndex].classList.add('shooter')
 
 function moveShooter(e) {
@@ -38,3 +47,18 @@ function moveShooter(e) {
     squares[currentShooterIndex].classList.add('shooter')
 }
 document.addEventListener('keydown', moveShooter)
+
+function moveHostile() {
+    const leftEdge = hostileAliens[0] % width === 0
+    const rightEdge = hostileAliens[hostileAliens.length - 1] % width === width -1
+    remove()
+
+    for (let i = 0; i < hostileAliens.length; i++) {
+        hostileAliens[i] += 1 
+    }
+
+    draw()
+
+}
+
+setInterval(moveHostile, 500)
