@@ -18,3 +18,5 @@ function draw() {
         squares[hostileAliens[i]].classList.add('hostile')
     }
 }
+
+draw()
