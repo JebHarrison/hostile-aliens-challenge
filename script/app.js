@@ -1,4 +1,5 @@
 const grid = document.querySelector('.grid')
+const resultsDisplay = document.querySelector('.results')
 let currentShooterIndex = 202
 let width = 15 
 let direction = 1
@@ -82,10 +83,10 @@ function moveHostile() {
     draw()
 
     if (squares[currentShooterIndex].classList.contains('hostile', 'shooter')) {
-        console.log('game over')
+        resultsDisplay.innerHTML = 'GAME OVER'
         clearInterval(hostileId)
     }
 
 }
 
-hostileId = setInterval(moveHostile, 500)
+hostileId = setInterval(moveHostile, 100)
