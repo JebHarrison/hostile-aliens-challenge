@@ -4,6 +4,7 @@
     border: solid black 1px;
     display: flex;
     flex-wrap: wrap ;
+    background-color: black;
 }
 
 .grid div {
@@ -18,4 +19,8 @@
 
 .shooter {
     background-color: red;
+}
+
+.laser {
+    background-color: greenyellow;
 }
