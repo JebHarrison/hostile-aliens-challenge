@@ -86,6 +86,13 @@ function moveHostile() {
         resultsDisplay.innerHTML = 'GAME OVER'
         clearInterval(hostileId)
     }
+    
+    for (let i = 0; i < hostileAliens.length; i++) {
+        if(hostileAliens[i] > (squares.length)) {
+            resultsDisplay.innerHTML = 'GAME OVER'
+            clearInterval(invadersId)
+        }
+    }
 
 }
 
