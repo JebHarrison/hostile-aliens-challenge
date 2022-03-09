@@ -6,6 +6,7 @@ let direction = 1
 let hostileId
 let goingRight = true
 let hostilesRemoved = []
+let results = 0
 
 for (let i = 0; i < 225; i++) {
     const square = document.createElement('div')
@@ -102,7 +103,7 @@ function moveHostile() {
     }
 }
 
-hostileId = setInterval(moveHostile, 100)
+hostileId = setInterval(moveHostile, 300)
 
 function shoot(e) {
     let laserId
@@ -122,6 +123,8 @@ function shoot(e) {
 
         const hostileRemoved = hostileAliens.indexOf(currentLaserIndex)
         hostilesRemoved.push(hostileRemoved)
+        results++
+        resultsDisplay.innerHTML = results
         console.log(hostilesRemoved)
     }
     
