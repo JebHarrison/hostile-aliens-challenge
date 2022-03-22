@@ -58,7 +58,7 @@ body {
     margin: auto;
   }
   .health-bar .bar {
-    background: #c54;
+    background:purple;
     width: 100%;
     height: 10px;
     position: relative;
