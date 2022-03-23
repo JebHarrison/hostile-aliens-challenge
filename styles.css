@@ -3,10 +3,14 @@ body {
     overflow: hidden;
     margin: 0;
   }
+
+  .game-container {
+
+  }
   
   .button-class {
     width: 180px;
-    display: inline-block;
+    display: inline-table;
     margin: 5% 20px;
     padding: 20px 0px;
     text-align: center;
@@ -22,8 +26,8 @@ body {
   }
   
   .btn-holder {
-    position: absolute;
-    top: 45%;
+    position: absolute ;
+    bottom: 45%;
     left: 35%;
   }
   
