@@ -1,35 +1,36 @@
 body {
-    background: black !important;
-    overflow: hidden;
+    background: black !important; 
+     overflow: hidden; 
     margin: 0;
   }
 
-  .game-container {
-
-  }
+  
   
   .button-class {
     width: 180px;
-    display: inline-table;
-    margin: 5% 20px;
-    padding: 20px 0px;
-    text-align: center;
+   display: inline-table; 
+     margin: 5% 20px;
+    padding: 20px 0px; 
+     text-align: center; 
     font-family: Arial;
     font-size: 20px;
     color: #fff;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; 
     text-decoration: none;
     letter-spacing: 1.5px;
     background: navy;
     color: #fff;
-    position: relative;
+    /* position: absolute; */
   }
   
-  .btn-holder {
+  .btn-holder { 
     position: absolute ;
-    bottom: 45%;
-    left: 35%;
-  }
+    bottom: 15%;
+    left: 42%; 
+   }
   
   .grid-container {
     display: grid;
@@ -37,6 +38,7 @@ body {
     /* grid-template-columns: auto auto auto; */
     background-color: #44f321;
     padding: 10px;
+    
   }
   
   .grid-item {
@@ -77,3 +79,5 @@ body {
     width: 0px;
     transition: width 0.5s linear;
   }
+
+  
